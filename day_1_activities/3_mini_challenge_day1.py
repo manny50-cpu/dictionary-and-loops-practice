@@ -57,4 +57,37 @@
         #    - Display an error message saying the CPS ID is already taken
 
 
+import student_data
+students = student_data.students
+print(len(students))
+print(students[0]['Combo,Name'])
+
+find=input("What is your student's name?")
+print(find)
+for student in students:
+    if find==student["Combo,Name"]:
+        print(student['CPSID'])
+        print(student['Combo,Name'])
+        print(student['LName'])
+        print(student['FName'])
+        print(student['MName'])
+        print(student['HR'])
+        print(student['GL'])
+        print(student['Email'][0])
+        print(student['Email'][1])
+        print("-----------------------")
+
+
+
+
+
+
+
+
+new_student = bool(input("Is there a new student here"))
+if new_student:
+    new_cpsid = input("CPS ID?")
+print(new_cpsid)
+if new_cpsid in students:
+    print("already exists")
 
